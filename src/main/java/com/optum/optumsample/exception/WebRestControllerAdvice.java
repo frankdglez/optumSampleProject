@@ -12,6 +12,6 @@ public class WebRestControllerAdvice extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(CustomException.class)
     protected ResponseEntity<Object> handleMyException(CustomException ex, WebRequest req) {
-        return handleExceptionInternal(ex, ex.msg, new HttpHeaders(), ex.code, req);
+        return handleExceptionInternal(ex, ex.getMessage(), new HttpHeaders(), ex.getCode(), req);
     }
 }
