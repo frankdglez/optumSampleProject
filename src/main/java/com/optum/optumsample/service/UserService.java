@@ -25,7 +25,9 @@ public class UserService {
     public User saveUser(User user) {
         if (user.getFirstName() == null || user.getLastName() == null) {
             throw new CustomException(CustomException.NOT_EXISTING_RESOURCES, HttpStatus.BAD_REQUEST);
-        } else {
+        } else if (user.getFirstName().isEmpty() || user.getLastName().isEmpty()){
+            throw new CustomException(CustomException.NOT_EXISTING_RESOURCES, HttpStatus.BAD_REQUEST);
+        }else {
             return userRepository.save(user);
         }
     }
