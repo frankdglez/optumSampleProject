@@ -24,7 +24,7 @@ public class UsersController implements IController<User> {
 
     @Override
     @GetMapping("/user/{userId}")
-    public User getById(@PathVariable("userId") String userId) {
+    public User getById(@PathVariable("userId") Long userId) {
         return userService.getById(userId);
     }
 
