@@ -42,7 +42,8 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 mvn spring-boot:run
 ```
 ##When the service is running
-##openAPI definition
+
+openAPI definition
 * Please go to http://localhost:8080/developers - to view the CRUD operations implemented, you will find the following methods.
 ```
 POST /save to save one user
@@ -73,7 +74,7 @@ Note.- All the information is on the 'application.yml'
 ### Web Page URLs
 
 |  URL |  Method |
-|----------|--------------|--------------|
+|----------|--------------|
 |`http://localhost:8080/save`       | POST |
 |`http://localhost:8080/user/1`         | GET |
 |`http://localhost:8080/all` | GET |
@@ -90,6 +91,8 @@ to save one user with the 'POST' operation please use the following on the body,
     "zipCode": "55444",
     "phoneNumber" : "999-999-999"
 }
+
+IMPORTANT.- The fields `firstName, lastName` CAN'T be nulls
 ```
 
 I have added 10 dummy users to the DB on the `data.sql` file under `resources` directory, and is recreated every time you restart the service, so if you add a user with the `POST` operation it will get the id 11.
