@@ -57,10 +57,9 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <scope>test</scope>
+            <version>1.10.19</version>
         </dependency>
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
